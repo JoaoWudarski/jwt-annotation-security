@@ -27,11 +27,11 @@ public class RequestInterceptor implements HandlerInterceptor {
             log.trace("Requisicao interceptada, token sendo validado...");
             String token = request.getHeader(securityToken.headerName());
             try {
-                Integer permissionLevel = securityToken.minimumLevelRole();
+                String permissionLevel = securityToken.permissionLevel();
                 tokenService.validateToken(token, permissionLevel);
                 log.trace("Token {} validado com sucesso!", token);
             } catch (Exception e) {
-                log.error(String.format("Requisição não permitida, token %s não autorizado.", token));
+                log.error("Requisição não permitida, token {} não autorizado.", token);
                 throw new UnauthorizedException(e.getMessage());
             }
         }

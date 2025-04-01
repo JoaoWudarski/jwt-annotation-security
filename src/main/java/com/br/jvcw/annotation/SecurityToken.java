@@ -10,5 +10,5 @@ import java.lang.annotation.Target;
 public @interface SecurityToken {
 
     String headerName() default "Authorization";
-    int minimumLevelRole() default 0;
+    String permissionLevel();
 }

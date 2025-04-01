@@ -14,7 +14,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.1.10</version>
+        <version>3.4.4</version>
         <relativePath/>
     </parent>
 
@@ -23,7 +23,7 @@
         <systemVersion>${project.version}</systemVersion>
         <projectName>${project.name}</projectName>
 
-        <java.version>17</java.version>
+        <java.version>21</java.version>
 
         <docencoding>UTF-8</docencoding>
     </properties>

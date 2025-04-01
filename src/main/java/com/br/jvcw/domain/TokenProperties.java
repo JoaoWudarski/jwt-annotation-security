@@ -1,18 +1,15 @@
 package com.br.jvcw.domain;
 
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
 
-import java.time.ZoneOffset;
-
-@Getter
-@RequiredArgsConstructor
+@Data
+@Component
 @ConfigurationProperties(prefix = "token-config")
 public class TokenProperties {
 
-    private final String issuer;
-    private final Long expirationTimeSeconds;
-    private final String secretKey;
-    private final ZoneOffset zoneOffset;
+    private String issuer;
+    private Long expirationTimeSeconds;
+    private String secretKey;
 }

@@ -1,12 +1,11 @@
 package com.br.jvcw.domain;
 
-import lombok.Data;
+import java.util.List;
+import java.util.Map;
 
-@Data
-public abstract class SecureUser {
+public interface SecureUser {
 
-    private String id;
-    private String username;
-    private String permissionName;
-    private Integer permissionLevel;
+    Map<String, Object> getTokenBody();
+    String getId();
+    List<String> getPermissionList();
 }

@@ -6,5 +6,5 @@ import java.util.Optional;
 
 public interface SearchUser {
 
-    Optional<SecureUser> findById(Object id);
+    Optional<SecureUser> findSecureById(String id);
 }
